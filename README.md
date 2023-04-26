@@ -1,4 +1,5 @@
 # grocery_inventory
-c++ Project created to read in a text file that lists either: a)all items sold in a day or b) all items available in a store's inventory.
-A backup file is created within the directory before the user is prompted with options of displaying data read in by the text file in the form of an itemized list, a histogram, or a search feature that returns the total number of items for a given user search.
-A single class is implimented via grocerylist.cpp and grocerylist.h, with main() containing the user menu interaction loop for simplicity and modularity.
+c++ Project created to read in a text file that reads in a list of items from a local text file and makes a backup file prior to running the program
+Users have the option of adding/changing values for individual items in the collection and are then able to 
+print information in a number of ways including just the items and quantities, item values, or all information
+OOP structure crated in .NET env that can work with a number of different data/item types to organize and tabulate overall collection value
