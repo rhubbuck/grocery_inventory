@@ -21,7 +21,7 @@ void printUserMenu() { // Define function to print menu for user to make selecti
     cout << "3 - Print histogram of items" << endl;
     cout << "4 - Add/Change value of item" << endl;
     cout << "5 - Print list of items with values" << endl;
-    cout << "6 - Print list of items and quantity with values" << endl;
+    cout << "6 - Print all information and total count/value" << endl;
     cout << "7 - Exit program" << endl;
     cout << "****************************************" << endl;
 }
