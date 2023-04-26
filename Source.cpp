@@ -1,3 +1,9 @@
+/*  Name: Ryan Hubbuck
+*   CS-210
+*   Project 3
+*   Date: 04/13/2023
+*/
+
 #include <iostream>
 #include <fstream>
 #include <string>

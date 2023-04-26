@@ -14,7 +14,7 @@ GroceryList::GroceryList(vector<string> t_items) { // Take vector as parameter
 }
 
 void GroceryList::addPrice(string t_itemToFindPrice) {
-	float itemPrice = 0;
+	float itemPrice = 0.00;
 	cout << "What is the value of the item? $";
 	cin >> itemPrice;
 	// Format string by removing whitespace
@@ -54,9 +54,14 @@ void GroceryList::printListWithPrices() {
 
 // Define function to print list of item, quantitiy, and price
 void GroceryList::printListAllData() {
+	int totalItemCount = 0;
+	float totalValue = 0.00;
 	for (auto& pair : m_itemsWithPrice) { // Break map into key value pairs
+		totalValue += (pair.second * m_groceryItems[pair.first]);
+		totalItemCount += m_groceryItems[pair.first];
 		cout << endl << pair.first << " - $" << pair.second << " x " << m_groceryItems[pair.first] << endl;
 	}
+	cout << endl << "You have a total of " << totalItemCount << " item(s) worth $" << totalValue << endl;
 	return;
 }
 
