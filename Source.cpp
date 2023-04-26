@@ -18,8 +18,11 @@ void printUserMenu() { // Define function to print menu for user to make selecti
     cout << "Please make a selection:" << endl;
     cout << "1 - Search for an item" << endl;
     cout << "2 - Print list of items and quantities" << endl;
-    cout << "3 - Print histogram list of items" << endl;
-    cout << "4 - Exit program" << endl;
+    cout << "3 - Print histogram of items" << endl;
+    cout << "4 - Add/Change value of item" << endl;
+    cout << "5 - Print list of items with values" << endl;
+    cout << "6 - Print list of items and quantity with values" << endl;
+    cout << "7 - Exit program" << endl;
     cout << "****************************************" << endl;
 }
 
@@ -33,6 +36,7 @@ int main() {
     int userSelection; // Declare variable for user menu input
     string userInput; // Declare variable for user input search
     bool runProgram = true; // Declare boolean to exit/continue program
+    string itemToAddPriceTo; // Declare variable to search for 
 
     // Open file to read from on my local device
     listFS.open("C:\\Users\\rhubb\\OneDrive\\Desktop\\CS210_Project_Three_Input_File.txt");
@@ -87,7 +91,22 @@ int main() {
             newList.printHistogram();
         }
 
-        else if (userSelection == 4) { // If 4, exit program
+
+        else if (userSelection == 4) { // If 4, allow user to input a value
+            cout << "Please enter an item to add/change value of." << endl;
+            cin >> itemToAddPriceTo;
+            newList.addPrice(itemToAddPriceTo);
+        }
+
+        else if (userSelection == 5) { // If 5, print list of items and values
+            newList.printListWithPrices();
+        }
+
+        else if (userSelection == 6) { // If 6, print list of item, quantity, and value
+            newList.printListAllData();
+        }
+
+        else if (userSelection == 7) { // If 7, exit program
             cout << "Thank you for using CornerGrocerApp" << endl;
             runProgram = false;
         }

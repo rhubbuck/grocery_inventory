@@ -13,8 +13,12 @@ public: // Declare public constructor and methods
     void printItemQuantity(string t_itemToFind); // Search for item
     void printHistogram(); // Print histogram
     void printList(); // Print list
+    void printListWithPrices(); // Print prices
+    void printListAllData(); // Print item, quant, and price
+    void addPrice(string t_itemToAddPrice); // Add price value to an item
   
 private:// Declare private variables/methods with m_ for member per naming guidelines
     map<string, int> m_groceryItems;
+    map<string, int> m_itemsWithPrice;
 };
 #endif
